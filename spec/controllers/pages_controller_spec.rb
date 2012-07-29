@@ -4,7 +4,7 @@ describe PagesController do
  render_views
 
  before(:each) do
-    @base_title = "#{@title} | NY Custom Hydroponics"
+    @base_title = "NY Custom Hydroponics"
  end
    
 
@@ -16,7 +16,7 @@ describe PagesController do
     it "should have the right title" do
       get 'home'
       response.should have_selector("title",
-                        :content => " #{@base_title}")
+                        :content => "Home | #{@base_title}")
     end
     it " home should have non blank body" do
       get 'home'
@@ -33,7 +33,7 @@ describe PagesController do
     it "should have the right title" do
       get 'contact'
       response.should have_selector("title",
-                        :content => " #{@base_title}")
+                        :content => "Contact | #{@base_title}")
     end
     it " home should have non blank body" do
       get 'contact'
@@ -49,7 +49,7 @@ describe PagesController do
     it "should have the right title" do
       get 'about'
       response.should have_selector("title",
-                        :content => " #{@base_title}")
+                        :content => "About | #{@base_title}")
     end
     it " home should have non blank body" do
       get 'about'
@@ -65,7 +65,7 @@ describe PagesController do
         it "should have the right title" do
       get 'videos'
       response.should have_selector("title",
-                        :content => " #{@base_title}")
+                        :content => "Videos | #{@base_title}")
     end
     it " home should have non blank body" do
       get 'videos'
