@@ -18,6 +18,10 @@ class PagesController < ApplicationController
 
   def videos
     @title ="Videos"
+    @video_src = "https://www.youtube.com/embed/El2Jk4VwOpg?feature=player_detailpage"
+    @video_title = "First Video: week 2" 
+
+
   end
 
 end
