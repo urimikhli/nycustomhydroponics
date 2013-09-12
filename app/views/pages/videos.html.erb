@@ -2,11 +2,11 @@
 
 <% i=0 %>
 <% @vid_src_array.each do | video_src| %>
-  <% video_title = @vid_title_array[i] %>
-  <p>
-  <%= "#{video_title}" %>
-  <%= render 'shared/video_embed_partial', { :video_src => video_src} %>
-  </p>
+  <div>
+    <% video_title = @vid_title_array[i] %>
+    <%= "#{video_title}" %>
+    <%= render 'shared/video_embed_partial', { :video_src => video_src} %>
+  </div>
   <% i += 1 %>
 <% end %>
 
